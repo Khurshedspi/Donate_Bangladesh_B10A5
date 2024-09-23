@@ -25,4 +25,4 @@ donationContainer.classList.add('hidden');
     document.getElementById('history-container-btn').classList.add('bg-[#B4F461]');
 
 
-})
+});
