@@ -27,6 +27,7 @@ document.getElementById("noakhali-donate-btn")
     div.classList.add('border');
     div.classList.add('p-6');
     div.classList.add('rounded');
+    div.classList.add('mt-5');
     div.innerHTML = `
     
     <h1 class ="font-bold text-xl">${noakhaliInputValue} Taka is Donated For ${noakhaliCardTitle}</h1>
@@ -71,6 +72,7 @@ document.getElementById('feni-donate-btn')
     div.classList.add('border');
     div.classList.add('p-6');
     div.classList.add('rounded');
+    div.classList.add('mt-5');
     div.innerHTML = `
     
     <h1 class ="font-bold text-xl">${feniInputValue} Taka is Donated For ${feniCardTitle}</h1>
@@ -113,6 +115,7 @@ document.getElementById('quota-donate-btn')
     div.classList.add('border');
     div.classList.add('p-6');
     div.classList.add('rounded');
+    div.classList.add('mt-5');
     div.innerHTML = `
     
     <h1 class ="font-bold text-xl">${quotaInputValue} Taka is Donated For ${quotaCardTitle}</h1>
