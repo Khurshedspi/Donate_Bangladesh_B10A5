@@ -33,12 +33,11 @@
   </head>
   <body class="font-lexend_font">
     <!-- header start here  -->
-    <header class="sticky top-0  ">
+    <header class="sticky top-0">
       <!-- start navbar  -->
       <section class="bg-[#F9F7F3] pb-8 pt-4">
-     
-          <div
-          class="navbar  max-sm:flex-wrap items-center justify-center space-y-5"
+        <div
+          class="navbar max-sm:flex-wrap items-center justify-center space-y-5"
         >
           <div class="navbar-start max-sm:items-center justify-center">
             <div class="dropdown"></div>
@@ -50,10 +49,11 @@
           </div>
           <div class="navbar-end max-sm:items-center justify-center">
             <img class="mr-2" src="./assets/coin.png" alt="" />
-            <a class="text-gray-600 font-[500]">10500 BDT</a>
+            <a class="text-gray-600 font-[500]"
+              ><span id="my-total-balance">15500</span> BDT</a
+            >
           </div>
         </div>
-      
       </section>
       <!-- navbar end  -->
 
@@ -61,10 +61,16 @@
       <section
         class="bg-white bg-opacity-80 flex items-center justify-center py-7 gap-7"
       >
-        <button class="bg-[#B4F461] btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+        <button
+          id="donation-details-btn"
+          class="bg-[#B4F461] btn btn-xs sm:btn-sm md:btn-md lg:btn-lg"
+        >
           Donation
         </button>
-        <button class="bg-white btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+        <button
+          id="history-details-btn"
+          class="bg-white btn btn-xs sm:btn-sm md:btn-md lg:btn-lg"
+        >
           History
         </button>
       </section>
@@ -94,9 +100,9 @@
             <div class="md:w-1/2 lg:space-y-8">
               <button class="btn text-gray-500">
                 <img src="./assets/coin.png" alt="coin icon" />
-                0 BDT
+                <span id="noakhali-card-balance">0</span> <span>BDT</span>
               </button>
-              <h1 class="text-xl font-bold">
+              <h1 id="noakhali-card-title" class="text-xl font-bold">
                 Donate for Flood at Noakhali, Bangladesh
               </h1>
 
@@ -109,20 +115,49 @@
                 the lives of those in need.
               </p>
               <input
+                id="noakhali-input-field"
                 class="w-full border border-[#d2d1d1aa] outline-none p-4 my-4 rounded-lg"
                 placeholder="Write Donation Amount"
                 type="text"
               />
-              <button class="btn w-full text-xl font-semibold bg-[#B4F461]">
+              <button
+                id="noakhali-donate-btn"
+                
+                class="btn w-full text-xl font-semibold bg-[#B4F461]"
+              >
                 Donate Now
               </button>
             </div>
           </div>
         </section>
+        <!-- modal start  -->
+        <dialog id="my_modal_1" class="modal">
+          <form
+            method="dialog"
+            class="modal-box px-5 py-10 flex flex-col justify-center items-center"
+          >
+            <i class="fa-regular fa-circle-check text-6xl text-primary"></i>
+            <h3 class="font-bold text-2xl text-primary my-5">Congrats!</h3>
+            <img class="w-14 mb-4" src="./assets/coin.png" alt="" />
+            <h3>You Have Donated for Humankind</h3>
+            <div class="text-center">
+              <p class="font-bold">Successfully</p>
+            </div>
+
+            <button
+              id="btn-continue"
+              class="btn bg-primary px-16 btn-md hover:bg-black transition-colors ease-in duration-300 text-white mt-4"
+            >
+              Close Confirmation
+            </button>
+          </form>
+        </dialog>
+        <!-- modal end  -->
+
         <!-- card 01 end -->
 
         <!-- card 02 start -->
-        <section>
+        <!-- <section>
           <div
             class="md:flex items-center justify-center gap-7 border rounded-lg p-5 border-[#d2d1d1aa]"
           >
@@ -163,11 +198,11 @@
               </button>
             </div>
           </div>
-        </section>
+        </section> -->
         <!-- card 02 end -->
 
         <!-- card 03 start -->
-        <section>
+        <!-- <section>
           <div
             class="md:flex items-center justify-center gap-7 border rounded-lg p-5 border-[#d2d1d1aa]"
           >
@@ -209,7 +244,7 @@
               </button>
             </div>
           </div>
-        </section>
+        </section> -->
         <!-- card 03 end -->
         <!-- cards end  -->
       </section>
@@ -220,5 +255,7 @@
     <!-- footer end here  -->
 
     <script src="./js/features.js"></script>
+    <script src="./js/utitlities.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
