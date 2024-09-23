@@ -6,11 +6,16 @@ document.getElementById("noakhali-donate-btn")
     const noakhaliInputValue = getValueAndParsefloat("noakhali-input-field");
     const noakhaliCardTitle = getInnerText('noakhali-card-title');
     const historyContainer = document.getElementById('history-container');
+   
+ 
 
     if (isNaN((noakhaliInputValue))) {
       alert("Please type Right Amount 🖋️");
       return;
-    } else if (noakhaliInputValue < 0) {
+    
+    }
+  
+    else if (noakhaliInputValue < 0) {
       alert("Please Type Right Amount 🖋️");
       return;
     } else if (myBalance < noakhaliInputValue) {
@@ -55,7 +60,7 @@ document.getElementById('feni-donate-btn')
     const feniCardTitle = getInnerText('feni-card-title');
     const historyContainer = document.getElementById('history-container');
 
-    if (isNaN(parseFloat(feniInputValue))) {
+    if (isNaN((feniInputValue))) {
         alert("Please type Right Amount 🖋️");
         return;
       } else if (feniInputValue < 0) {
@@ -101,7 +106,7 @@ document.getElementById('quota-donate-btn')
     const quotaCardTitle = getInnerText('quota-card-title');
     const historyContainer = document.getElementById('history-container');
 
-    if (isNaN(parseFloat(quotaInputValue))) {
+    if (isNaN((quotaInputValue))) {
         alert("Please type Right Amount 🖋️");
         return;
       } else if (quotaInputValue < 0) {
@@ -110,6 +115,7 @@ document.getElementById('quota-donate-btn')
       } else if (myBalance < quotaInputValue) {
         alert("Your account does not have sufficient balance😥");
         return;
+        
       } else {
         const myCurrentBalance = myBalance - quotaInputValue;
         document.getElementById('my-total-balance').innerText = myCurrentBalance;
