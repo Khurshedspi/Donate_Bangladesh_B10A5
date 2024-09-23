@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Daisy Ui CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom Design -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            font_family: {
+              lexend: "Lexend",
+            },
+          },
+        },
+      };
+    </script>
+    <title>Blog</title>
+  </head>
+  <body>
+    <header>
+
+<!-- start navbar  -->
+<section class="bg-[#F9F7F3] pb-11">
+    <div
+      class="navbar container mx-auto max-sm:flex-wrap items-center justify-center space-y-5"
+    >
+      <div class="navbar-start max-sm:items-center justify-center">
+        <div class="dropdown"></div>
+        <a id="home-btn" class="btn btn-ghost bg-[#B4F461] text-xl">Home</a>
+      </div>
+      <div class="navbar-center lg:flex gap-x-4">
+        <img class="w-7" src="./assets/logo.png" alt="" />
+        <p class="text-xl font-semibold">Donate Bangladesh</p>
+      </div>
+      <div class="navbar-end max-sm:items-center justify-center">
+        <img class="mr-2" src="./assets/coin.png" alt="" />
+        <a class="text-gray-600 font-[500]">10500 BDT</a>
+      </div>
+    </div>
+  </section>
+  <!-- navbar end  -->
+
+
+
+    </header>
+    <main>
+      <section class="w-[80%] mx-auto my-9">
+        <h1 class="font-extrabold text-5xl">About Donation FAQ</h1>
+        <div class="border my-8">
+          <div class="collapse border-b py-6 rounded-none">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">
+              Why should we stand up for the helpless?
+            </div>
+            <div class="collapse-content">
+              <p>
+                Stand up for the helpless because it’s our moral duty to uplift
+                those in need, promote equality, and build a compassionate,
+                unified society. Your support can empower others and create
+                lasting positive change.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow py-6 border-b rounded-none">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">
+              How can I help the helpless?
+            </div>
+            <div class="collapse-content">
+              <p>
+                You can help the helpless by donating essential resources,
+                volunteering your time, offering emotional support, and raising
+                awareness about their struggles. Small actions can make a big
+                impact on their lives.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow py-6 border-b rounded-none">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">
+              How we take financial assistance to the needy.
+            </div>
+            <div class="collapse-content">
+              <p>
+                To provide financial assistance to the needy, you can organize
+                fundraising campaigns, partner with charitable organizations, or
+                use online platforms like GoFundMe. Ensure transparency by
+                keeping records and directly distributing funds to those in
+                need.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow py-6 border-b rounded-none">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">
+                Through which money or assistance will be given
+            </div>
+            <div class="collapse-content">
+              <p><ul>
+                <li>Bkash: 01800000002</li>
+                <li>Nagad: 01800010000</li>
+                <li>Rocket: 0180005000</li>
+                <li>By meeting: Dhaka University Johurul Haque Hall.</li>
+              </ul></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./js/blog.js"></script>
+  </body>
+</html>
