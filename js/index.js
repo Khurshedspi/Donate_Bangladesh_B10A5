@@ -82,3 +82,45 @@ document.getElementById('feni-donate-btn')
 })
 
 // feni card end 
+
+
+// quota protest start
+document.getElementById('quota-donate-btn')
+.addEventListener('click',function(){
+    const myBalance = getInnerTextAndParseFloat("my-total-balance");
+    const quotaCardBalance = getInnerTextAndParseFloat("quota-card-balance");
+    const quotaInputValue = getValueAndParsefloat("quota-input-field");
+    const quotaCardTitle = getInnerText('quota-card-title');
+    const historyContainer = document.getElementById('history-container');
+
+    if (isNaN(parseFloat(quotaInputValue))) {
+        alert("Please type Right Amount 🖋️");
+      } else if (quotaInputValue < 0) {
+        alert("Please Type Right Amount 🖋️");
+      } else if (myBalance < quotaInputValue) {
+        alert("Your account does not have sufficient balance😥");
+      } else {
+        const myCurrentBalance = myBalance - quotaInputValue;
+        document.getElementById('my-total-balance').innerText = myCurrentBalance;
+        const quotaNewCardBalance = quotaInputValue + quotaCardBalance;
+       document.getElementById('quota-card-balance').innerText = quotaNewCardBalance;
+  
+        document.getElementById("my_modal_3").showModal();
+        document.getElementById('quota-input-field').value = '';
+      }
+
+      const div = document.createElement('div');
+    div.classList.add('border');
+    div.classList.add('p-6');
+    div.classList.add('rounded');
+    div.innerHTML = `
+    
+    <h1 class ="font-bold text-xl">${quotaInputValue} Taka is Donated For ${quotaCardTitle}</h1>
+    <p>Date: ${new Date()} </p>
+    `
+
+    historyContainer.insertBefore(div, historyContainer.firstChild);
+})
+
+
+// quota protest start
