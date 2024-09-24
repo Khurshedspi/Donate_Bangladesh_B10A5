@@ -14,6 +14,10 @@ document.getElementById("noakhali-donate-btn")
       return;
     
     }
+    else if(noakhaliInputValue === 0){
+      alert("Please type Right Amount 🖋️");
+      return;
+    }
   
     else if (noakhaliInputValue < 0) {
       alert("Please Type Right Amount 🖋️");
@@ -63,7 +67,12 @@ document.getElementById('feni-donate-btn')
     if (isNaN((feniInputValue))) {
         alert("Please type Right Amount 🖋️");
         return;
-      } else if (feniInputValue < 0) {
+      }
+      else if(feniInputValue === 0){
+        alert("Please type Right Amount 🖋️");
+        return;
+      }
+      else if (feniInputValue < 0) {
         alert("Please Type Right Amount 🖋️");
         return;
       } else if (myBalance < feniInputValue) {
@@ -109,7 +118,12 @@ document.getElementById('quota-donate-btn')
     if (isNaN((quotaInputValue))) {
         alert("Please type Right Amount 🖋️");
         return;
-      } else if (quotaInputValue < 0) {
+      } 
+      else if(quotaInputValue === 0){
+        alert("Please type Right Amount 🖋️");
+        return;
+      }
+      else if (quotaInputValue < 0) {
         alert("Please Type Right Amount 🖋️");
         return;
       } else if (myBalance < quotaInputValue) {
